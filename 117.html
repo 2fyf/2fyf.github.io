@@ -1,0 +1,66 @@
+<html>
+<head>
+  <style>
+    /* 添加CSS样式 */
+    .play-button {
+      padding: 10px 20px; /* 按钮内边距 */
+      background-color: #4CAF50; /* 背景颜色 */
+      color: white; /* 文字颜色 */
+      border: none; /* 无边框 */
+      border-radius: 5px; /* 圆角 */
+      cursor: pointer; /* 鼠标悬停时显示指针 */
+      font-size: 16px; /* 字体大小 */
+      font-weight: bold; /* 字体加粗 */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 阴影 */
+      transition: background-color 0.3s; /* 过渡效果 */
+    }
+
+    .play-button:hover {
+      background-color: #45a049; /* 鼠标悬停时的背景颜色 */
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      var audio = document.getElementById('backgroundMusic');
+      if (audio) {
+        audio.play().catch(function(error) {        
+          console.log("自动播放失败: ", error);
+        });
+      }
+    });
+
+    function playAudio() {
+      var audio = document.getElementById('backgroundMusic');
+      if (audio) {
+        audio.play().catch(function(error) {
+          console.log("手动播放失败: ", error);
+        });
+      }
+    }
+  </script>
+</head>
+<body>
+  <audio id="backgroundMusic" loop>
+    <source src="jxt843/image/wtl.mp3" type="audio/mpeg">
+    您的浏览器不支持 audio 元素。
+  </audio>
+  <button onclick="playAudio()" class="play-button">播放背景音乐</button>
+  <table width="100%" border="1">
+    <tr>
+      <td width="250" align="center" bgcolor="#000000" style="color: #FFFFFF; font-size: 36px;">&nbsp;东十二</td>
+      <td width="600" align="center"><img src="jxt843/image/QQ20241128-204959.png" width="625" height="471" alt=""/></td>
+      <td width="250" align="center" bgcolor="#060606" style="color: #FFFFFF; font-size: 36px;">&nbsp;117号寝室</td>
+    </tr>
+    <tr>
+      <td width="300"><a href="https://2fyf.github.io/index.html"><img src="jxt843/image/QQ20241128-203626.png" width="300" height="432" alt=""/></a></td>
+      <td width="300" align="center"><a href="wzy822/index.html"><img src="jxt843/image/QQ20241128-203524.png" width="348" height="571" alt=""/></a></td>
+      <td width="300"><a href="ctq803/index.html"><img src="jxt843/image/QQ20241128-203810.png" width="300" height="394" alt=""/></a></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#070707" style="color: #FFFFFF; font-size: 36px;">&nbsp;<a href="https://2fyf.github.io/index.html">江心田</a></td>
+      <td align="center" bgcolor="#070505" style="color: #FFFFFF; font-size: 36px;"><a href="wzy822/index.html">王泽宇&nbsp;</a></td>
+      <td align="center" bgcolor="#050303" style="color: #FFFFFF; font-size: 36px;">&nbsp;<a href="ctc803/index.html">陈天擎</a></td>
+    </tr>
+  </table>
+</body>
+</html>
